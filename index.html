@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundation Test Document</title>
+
+  <!-- Compressed CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- This is the blue header with the nav buttons -->
+  <header class="subnav-hero-section">
+    <h1 class="subnav-hero-headline">Space Stuff <small>Foundation CSS Example</small></h1>
+    <ul class="subnav-hero-subnav">
+      <li><a href="#">Launch API</a></li>
+      <li><a href="#">Second API</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </header>
+
+  <br>
+
+  <!-- First Row on page (form and results) -->
+  <div class="row">
+    <div class="row">
+      <div class="medium-4 columns">
+        <!-- This is where the collapsible CSS starts taking effect -->
+        <div class="wrapper">
+          <div class="collapsible">
+            <input type="checkbox" id="collapsible-head">
+            <label for="collapsible-head" class="button round large expand">Click To Search for Launch Info</label>
+            <div class="collapsible-text">
+              <!-- This is the Form -->
+              <div class=" translucent-form-overlay">
+                <form>
+                  <h3>Search for Launches</h3>
+                  <div class="row columns">
+                    <label>Launch Location:
+                      <select name="location" type="text">
+                        <option>All</option>
+                        <option value="Baikonur">Baikonur</option>
+                        <option value="Boca Chica / Starbase">Boca Chica / Starbase</option>
+                        <option value="Cape Canaveral">Cape Canaveral</option>
+                        <option value="French Guiana">French Guiana</option>
+                        <option value="Kennedy Space Center">Kennedy Space Center</option>
+                        <option value="Plesetsk">Plesetsk</option>
+                        <option value="Vanderberg">Vanderberg</option>
+                        <option value="Vostochny">Vostochny</option>
+                        <option value="Wallops Island">Wallops Island</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="row columns">
+                    <label>Future/Past:
+                      <select name="futurePast" type="text">
+                        <option>All</option>
+                        <option value="Future">Future</option>
+                        <option value="Past">Past</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="row columns">
+                    <label>Crewed:
+                      <select name="crewed" type="text">
+                        <option>All</option>
+                        <option value="Crewed">Crewed</option>
+                        <option value="Un-Crewed">Un-Crewed</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="row columns">
+                    <label>Launch Service Provider
+                      <select name="launchServiceProvider" type="text">
+                        <option>Any</option>
+                        <option value="Arianespace">Arianespace</option>
+                        <option value="Astra Space">Astra Space</option>
+                        <option value="Blue Origin">Blue Origin</option>
+                        <option value="China Aerospace Science and Technology Corporation">China Aerospace Science and
+                          Technology Corporation</option>
+                        <option value="China National Space Administration">China National Space Administration</option>
+                        <option value="Firefly Aerospace">Firefly Aerospace</option>
+                        <option value="Indian Space Research Organization">Indian Space Research Organization</option>
+                        <option value="Japan Aerospace Exploration Agency">Japan Aerospace Exploration Agency</option>
+                        <option value="Khrunichev State Research and Production Space Center">Khrunichev State Research
+                          and Production Space Center</option>
+                        <option value="National Aeronautics and Space Administration">National Aeronautics and Space
+                          Administration</option>
+                        <option value="Rocket Lab Ltd">Rocket Lab Ltd</option>
+                        <option value="Russian Federal Space Agency">Russian Federal Space Agency (ROSCOSMOS)</option>
+                        <option value="SpaceX">SpaceX</option>
+                        <option value="United Launch Alliance">United Launch Alliance</option>
+                      </select>
+                    </label>
+                  </div>
+
+                  <button type="button" class="primary button expanded search-button">
+                    Search
+                  </button>
+                </form>
+                <!-- This is the end of the form -->
+                <!-- This is where the collapsible CSS Stops taking effect -->
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Second Row on Page (second API and About Us) -->
+      <div class="callout secondary medium-8 columns" style="height:100%;">
+        <h5>This is where we will display search results</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Second Row -->
+  <div class="row small-up-2">
+    <div class="column">
+      <div class="callout secondary">
+        <h5>This is a secondary callout</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        <a href="#">It's dangerous to go alone, take this.</a>
+      </div>
+
+    </div>
+
+    <div class="column">
+      <div class="callout secondary">
+        <h5>This is a secondary callout</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+        <a href="#">It's dangerous to go alone, take this.</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Compressed JavaScript from Foundation-->
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
