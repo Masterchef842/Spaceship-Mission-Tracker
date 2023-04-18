@@ -103,7 +103,7 @@
 
              
 
-                  <button type="button" class="primary button expanded search-button">
+                  <button id="searchButton" type="button" class="primary button expanded search-button">
                     Search
                   </button>
                 </form>
@@ -120,17 +120,24 @@
 
       <!-- Second Row on Page (second API and About Us) -->
       <div class="callout secondary medium-8 columns" style="height:100%;">
-        <h5>This is where we will display search results</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
+        <div id="searchResults" class="work-feature-block row">
+          <div class="columns medium-7">
+            <img id="shipImg" class="work-feature-block-image" src="https://placehold.it/600x400"/>
+          </div>
+          <div class="columns medium-5">
+            <h2 id="launchName" class="work-feature-block-header">Project Description</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales diam ac hendrerit aliquet. Phasellus pretium libero vel molestie maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis est quam. Aenean blandit a urna laoreet tincidunt.</p>
+            <h2>Project Details</h2>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+              <li>Item 4</li>
+            </ul>
+          </div>
+        </div>
+        
+        
       </div>
     </div>
   </div>
@@ -168,7 +175,6 @@
   <!-- Compressed JavaScript from Foundation-->
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
     crossorigin="anonymous"></script>
-  <script src="./marsWeather.js"></script>
   <script src="script.js"></script>
 </body>
 
