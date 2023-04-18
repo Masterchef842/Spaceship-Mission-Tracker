@@ -1,7 +1,7 @@
 //!This is the API to fetch from the Launch Library!//
 
 const queryLaunchUrl = `https://lldev.thespacedevs.com/2.2.0/launch/?limit=3&offset=3`;
-let launchLocationWeather;
+
 fetch(queryLaunchUrl, {
   method: 'GET',
   headers: {
@@ -41,17 +41,17 @@ function processLaunchData(response) {
     let launchPadName = launch.pad.name
     let latitude = launch.pad.latitude;
     let longitude = launch.pad.longitude;
-    getWeather(latitude,longitude)
     let missionName = launch.mission.name;
     let = launch.rocket.configuration.name;
     let imgUrl = launch.image;
     let launchServiceProvider = launch.launch_service_provider.name;
+    getWeather(latitude,longitude);
 
     console.log('The Location Is ' + launch.pad.location.name)
     console.log('The Launch Pad Name Is ' + launch.pad.name)
     console.log('The Latitude Is ' + latitude);
     console.log('The Longitude Is ' + longitude);
-    
+  
   }
 };
 
@@ -68,6 +68,5 @@ function getWeather(latitude, longitude){
 
             })
     })
-}
-
+};
 //! Launch Library API END !//
