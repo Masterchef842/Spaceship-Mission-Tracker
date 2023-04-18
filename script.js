@@ -40,7 +40,7 @@ function getLaunchInfo() {
 function processLaunchData(response) {
     var launchData = response.results;
     console.log(launchData);
-    for (var i = 0; i < 1/*launchData.length*/; i++) {
+    for (var i = 0; i < launchData.length; i++) {
         var launch = launchData[i];
         console.log(launch.pad.name);
 
