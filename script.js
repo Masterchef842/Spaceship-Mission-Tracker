@@ -45,12 +45,28 @@ function processLaunchData(response) {
     let = launch.rocket.configuration.name;
     let imgUrl = launch.image;
     let launchServiceProvider = launch.launch_service_provider.name;
+    getWeather(latitude,longitude);
 
     console.log('The Location Is ' + launch.pad.location.name)
     console.log('The Launch Pad Name Is ' + launch.pad.name)
     console.log('The Latitude Is ' + latitude);
     console.log('The Longitude Is ' + longitude);
+  
   }
 };
 
+function getWeather(latitude, longitude){
+    let url="http://api.openweathermap.org/data/2.5/forecast?lat="+latitude+"&lon="+longitude+"&appid=30938dd6fcd531961e9f7d4e28342bde"
+    fetch(url)
+    .then(function(response){
+        if(!response.ok)
+            console.log(response.status)
+        else
+            response.json().then(function(data){
+                launchLocationWeather=data;
+                console.log(launchLocationWeather)
+
+            })
+    })
+};
 //! Launch Library API END !//
