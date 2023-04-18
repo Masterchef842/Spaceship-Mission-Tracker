@@ -12,8 +12,12 @@ function getWeather(event){
             else
                 response.json().then(function(data){
                     console.log(data)
+                    displayData(data)
                 })
         })
+}
+function displayData(data){
+    
 }
 
 weatherButton.addEventListener("click",getWeather)
