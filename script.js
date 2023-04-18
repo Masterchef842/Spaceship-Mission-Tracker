@@ -1,5 +1,5 @@
 //!This is the API to fetch from the Launch Library!//
-let searchButton=document.querySelector('#searchButton')
+let searchButton = document.querySelector('#searchButton')
 
 
 function getLaunchInfo() {
@@ -77,3 +77,33 @@ function getWeather(latitude, longitude) {
 //! Launch Library API END !//
 
 searchButton.addEventListener("click", getLaunchInfo)
+
+// // Added search button click method
+// let button = document.querySelector(".search")
+// button.addEventListener('click', () => {
+//     console.log('button pressed')
+//     sendAPIRequest();
+// })
+
+sendAPIRequest();
+
+// function made to send api request
+async function sendAPIRequest() {
+    let nasa_key = 'rn9bVJgUa0FaOs6GRHb3NN3WbN8N4HZACMMdrI8Y'
+    let response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${nasa_key}`);
+    console.log(response);
+    // responding code in json
+    let data = await response.json();
+    console.log(data);
+    document.getElementById("apod").src = data.hdurl;
+  var imageTitle = document.getElementById("title");
+
+ useApiData (data)
+}
+    
+function useApiData(data) {
+    document.querySelector('#content').innerHTML = data.explanation
+
+    // document.querySelector('#content').innerHTML = `<img src="${data.url}">`
+
+}
