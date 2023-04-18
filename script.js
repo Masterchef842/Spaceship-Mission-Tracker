@@ -40,7 +40,7 @@ function getLaunchInfo() {
 function processLaunchData(response) {
     var launchData = response.results;
     console.log(launchData);
-    for (var i = 0; i < launchData.length; i++) {
+    for (var i = 0; i < 1/*launchData.length*/; i++) {
         var launch = launchData[i];
         console.log(launch.pad.name);
 
@@ -61,9 +61,9 @@ function processLaunchData(response) {
         // console.log('The Launch Pad Name Is ' + launch.pad.name)
         // console.log('The Latitude Is ' + latitude);
         // console.log('The Longitude Is ' + longitude);
-        setWeather(latitude,longitude)
+        
         updatePage(imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider)
-
+        setWeather(latitude,longitude)
     }
 };
 
@@ -76,7 +76,7 @@ function setWeather(latitude, longitude) {
             else
                 response.json().then(function (data) {
                     console.log(data)
-                    weatherCard.textContent=data.list[0].weather[0]
+                    weatherCard.textContent="Current Conditions"+data.list[0].weather[0].description
 
                 })
         })
@@ -84,9 +84,9 @@ function setWeather(latitude, longitude) {
 function updatePage(imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider){
     missionCard.textContent=missionName
     imgCard.src=imgUrl
-    locationCard.textContent+=launchLocation
-    launchPadCard.textContent+=launchPadName
-    rocketCard.textContent+=rocketName
+    locationCard.textContent= "Launch Site: "+launchLocation
+    launchPadCard.textContent="Launch Pad: "+launchPadName
+    rocketCard.textContent="RocketName: "+rocketName
     
 }
 //! Launch Library API END !//
