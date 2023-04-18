@@ -1,6 +1,11 @@
 //!This is the API to fetch from the Launch Library!//
 let searchButton=document.querySelector('#searchButton')
-
+let missionCard=document.querySelector('#missionName');
+let imgCard=document.querySelector('#shipImg')
+let locationCard =document.querySelector('#launchSite');
+let launchPadCard=document.querySelector('#launchPadName');
+let rocketCard=document.querySelector('#rocketName');
+let weatherCard=document.querySelector('#launchWeather');
 
 function getLaunchInfo() {
     let queryLaunchUrl = `https://lldev.thespacedevs.com/2.2.0/launch/?limit=3&offset=3`;
@@ -47,20 +52,22 @@ function processLaunchData(response) {
         let latitude = launch.pad.latitude;
         let longitude = launch.pad.longitude;
         let missionName = launch.mission.name;
-        let = launch.rocket.configuration.name;
+        let rocketName= launch.rocket.configuration.name;
         let imgUrl = launch.image;
         let launchServiceProvider = launch.launch_service_provider.name;
-        getWeather(latitude, longitude);
+        // getWeather(latitude, longitude);
 
-        console.log('The Location Is ' + launch.pad.location.name)
-        console.log('The Launch Pad Name Is ' + launch.pad.name)
-        console.log('The Latitude Is ' + latitude);
-        console.log('The Longitude Is ' + longitude);
+        // console.log('The Location Is ' + launch.pad.location.name)
+        // console.log('The Launch Pad Name Is ' + launch.pad.name)
+        // console.log('The Latitude Is ' + latitude);
+        // console.log('The Longitude Is ' + longitude);
+        setWeather(latitude,longitude)
+        updatePage(imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider)
 
     }
 };
 
-function getWeather(latitude, longitude) {
+function setWeather(latitude, longitude) {
     let url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + latitude + "&lon=" + longitude + "&appid=30938dd6fcd531961e9f7d4e28342bde"
     fetch(url)
         .then(function (response) {
@@ -68,12 +75,24 @@ function getWeather(latitude, longitude) {
                 console.log(response.status)
             else
                 response.json().then(function (data) {
-                    launchLocationWeather = data;
-                    console.log(launchLocationWeather)
+                    console.log(data)
+                    weatherCard.textContent=data.list[0].weather[0]
 
                 })
         })
 };
+function updatePage(imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider){
+    missionCard.textContent=missionName
+    imgCard.src=imgUrl
+    locationCard.textContent+=launchLocation
+    launchPadCard.textContent+=launchPadName
+    rocketCard.textContent+=rocketName
+    
+}
 //! Launch Library API END !//
+
+
+
+//main code
 
 searchButton.addEventListener("click", getLaunchInfo)
