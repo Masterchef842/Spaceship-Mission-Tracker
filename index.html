@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+  
   <!-- This is the header with the nav buttons -->
   <div class="header-container">
     <header class="subnav-hero-section large-header">
@@ -28,8 +30,8 @@
         -1px 1px 0 #000,
          1px 1px 0 #000;">Space Stuff <small>Foundation CSS Example</small></h1>
       <ul class="subnav-hero-subnav" style="font-family: 'Jura', sans-serif; font-size:40px;">
-        <li><a href="#">Launch API</a></li>
-        <li><a href="#">Second API</a></li>
+        <li><a href="#searchResults">Launch API</a></li>
+        <li><a href="#apod">Astronomy picture of the day</a></li>
         <li><a href="#">About Us</a></li>
         <li><a target="_blank" href="https://zurb.com/responsive">Just do it!</a></li>
       </ul>
@@ -39,120 +41,196 @@
   <br>
 
   <!-- First Row on page (form and results) -->
-  <div class="row">
-    <div class="row">
-      <div class="medium-4 columns">
-        <!-- This is where the collapsible CSS starts taking effect -->
-        <div class="wrapper">
-          <div class="collapsible">
-            <input type="checkbox" id="collapsible-head">
-            <label for="collapsible-head" class="button round large expand">Click To Search for Launch Info</label>
-            <div class="collapsible-text">
-              <!-- This is the Form -->
-              <div class=" translucent-form-overlay">
-                <form>
-                  <h3>Search for Launches</h3>
-                  <div class="row columns" id="launches-and-events">
-                    <label>Launch Location:
-                      <select name="location" type="text">
-                        <option>All</option>
-                        <option value="Baikonur">Baikonur</option>
-                        <option value="Boca Chica / Starbase">Boca Chica / Starbase</option>
-                        <option value="Cape Canaveral">Cape Canaveral</option>
-                        <option value="French Guiana">French Guiana</option>
-                        <option value="Kennedy Space Center">Kennedy Space Center</option>
-                        <option value="Plesetsk">Plesetsk</option>
-                        <option value="Vanderberg">Vanderberg</option>
-                        <option value="Vostochny">Vostochny</option>
-                        <option value="Wallops Island">Wallops Island</option>
-                      </select>
-                    </label>
-                  </div>
-                  <div class="row columns">
-                    <label>Future/Past:
-                      <select name="futurePast" type="text">
-                        <option>All</option>
-                        <option value="Future">Future</option>
-                        <option value="Past">Past</option>
-                      </select>
-                    </label>
-                  </div>
-                  <div class="row columns">
-                    <label>Crewed:
-                      <select name="crewed" type="text">
-                        <option>All</option>
-                        <option value="Crewed">Crewed</option>
-                        <option value="Un-Crewed">Un-Crewed</option>
-                      </select>
-                    </label>
-                  </div>
-                  <div class="row columns">
-                    <label>Launch Service Provider
-                      <select name="launchServiceProvider" type="text">
-                        <option>Any</option>
-                        <option value="Arianespace">Arianespace</option>
-                        <option value="Astra Space">Astra Space</option>
-                        <option value="Blue Origin">Blue Origin</option>
-                        <option value="China Aerospace Science and Technology Corporation">China Aerospace Science and
-                          Technology Corporation</option>
-                        <option value="China National Space Administration">China National Space Administration</option>
-                        <option value="Firefly Aerospace">Firefly Aerospace</option>
-                        <option value="Indian Space Research Organization">Indian Space Research Organization</option>
-                        <option value="Japan Aerospace Exploration Agency">Japan Aerospace Exploration Agency</option>
-                        <option value="Khrunichev State Research and Production Space Center">Khrunichev State Research
-                          and Production Space Center</option>
-                        <option value="National Aeronautics and Space Administration">National Aeronautics and Space
-                          Administration</option>
-                        <option value="Rocket Lab Ltd">Rocket Lab Ltd</option>
-                        <option value="Russian Federal Space Agency">Russian Federal Space Agency (ROSCOSMOS)</option>
-                        <option value="SpaceX">SpaceX</option>
-                        <option value="United Launch Alliance">United Launch Alliance</option>
-                      </select>
-                    </label>
-                  </div>
-
-             
-
-                  <button id="searchButton" type="button" class="primary button expanded search-button">
-                    Search
-                  </button>
-                </form>
-                <!-- This is the end of the form -->
-                <!-- This is where the collapsible CSS Stops taking effect -->
+ 
+  <div class="row align-center">
+    <div class="medium-4 columns">
+      <!-- This is where the collapsible CSS starts taking effect -->
+      <div class="wrapper"style="width:100%;">
+        <div class="collapsible" >
+          <input type="checkbox" id="collapsible-head">
+          <label for="collapsible-head" class="button round large expand">Click To Search for Launch Info</label>
+          <div class="collapsible-text" style="width:100%;">
+            <!-- This is the Form -->
+            <div class=" translucent-form-overlay">
+              <form>
+                <h3>Search for Launches</h3>
+                <div class="row columns" id="launches-and-events">
+                  <label>Launch Location:
+                    <select name="location" type="text">
+                      <option>All</option>
+                      <option value="Baikonur">Baikonur</option>
+                      <option value="Boca Chica / Starbase">Boca Chica / Starbase</option>
+                      <option value="Cape Canaveral">Cape Canaveral</option>
+                      <option value="French Guiana">French Guiana</option>
+                      <option value="Kennedy Space Center">Kennedy Space Center</option>
+                      <option value="Plesetsk">Plesetsk</option>
+                      <option value="Vanderberg">Vanderberg</option>
+                      <option value="Vostochny">Vostochny</option>
+                      <option value="Wallops Island">Wallops Island</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="row columns">
+                  <label>Future/Past:
+                    <select name="futurePast" type="text">
+                      <option>All</option>
+                      <option value="Future">Future</option>
+                      <option value="Past">Past</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="row columns">
+                  <label>Crewed:
+                    <select name="crewed" type="text">
+                      <option>All</option>
+                      <option value="Crewed">Crewed</option>
+                      <option value="Un-Crewed">Un-Crewed</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="row columns">
+                  <label>Launch Service Provider
+                    <select name="launchServiceProvider" type="text">
+                      <option>Any</option>
+                      <option value="Arianespace">Arianespace</option>
+                      <option value="Astra Space">Astra Space</option>
+                      <option value="Blue Origin">Blue Origin</option>
+                      <option value="China Aerospace Science and Technology Corporation">China Aerospace Science and
+                        Technology Corporation</option>
+                      <option value="China National Space Administration">China National Space Administration</option>
+                      <option value="Firefly Aerospace">Firefly Aerospace</option>
+                      <option value="Indian Space Research Organization">Indian Space Research Organization</option>
+                      <option value="Japan Aerospace Exploration Agency">Japan Aerospace Exploration Agency</option>
+                      <option value="Khrunichev State Research and Production Space Center">Khrunichev State Research
+                        and Production Space Center</option>
+                      <option value="National Aeronautics and Space Administration">National Aeronautics and Space
+                        Administration</option>
+                      <option value="Rocket Lab Ltd">Rocket Lab Ltd</option>
+                      <option value="Russian Federal Space Agency">Russian Federal Space Agency (ROSCOSMOS)</option>
+                      <option value="SpaceX">SpaceX</option>
+                      <option value="United Launch Alliance">United Launch Alliance</option>
+                    </select>
+                  </label>
+                </div>
 
 
-              </div>
+
+                <button id="searchButton" type="button" class="primary button expanded search-button">
+                  Search
+                </button>
+              </form>
+              <!-- This is the end of the form -->
+              <!-- This is where the collapsible CSS Stops taking effect -->
+
+
             </div>
           </div>
-
         </div>
-      </div>
-
-      <!-- Second Row on Page (second API and About Us) -->
-      <div class="callout secondary medium-8 columns" style="height:100%;">
-        <div id="searchResults" class="work-feature-block row">
-          <div class="columns medium-7">
-            <img id="shipImg" class="work-feature-block-image" src="https://placehold.it/600x400" />
-          </div>
-          <div class="columns medium-5">
-            <h2 id="missionName" class="work-feature-block-header">Project Description</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales diam ac hendrerit aliquet.
-              Phasellus pretium libero vel molestie maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Etiam quis est quam. Aenean blandit a urna laoreet tincidunt.</p>
-            <h2>Project Details</h2>
-            <ul>
-              <li id="launchSite">Launch Site: </li>
-              <li id="launchPadName">Launch Pad: </li>
-              <li id="rocketName">RocketName: </li>
-              <li id="launchWeather">Current Conditions: </li>
-            </ul>
-          </div>
-        </div>
-
-
       </div>
     </div>
   </div>
+
+  <!-- Second Row on Page (second API and About Us) -->
+  <div class="row" >
+    <div id="launchContainer" >
+      <div class="callout secondary medium-8 columns searchResults hide" style="height:50%; width:100%;">
+        <div class="work-feature-block row">
+          <div class="columns medium-7">
+            <img class="work-feature-block-image shipImg" src="https://placehold.it/600x400" />
+          </div>
+          <div class="columns medium-5">
+            <h2 class="work-feature-block-header missionName">Project Description</h2>
+            <h2>Project Details</h2>
+            <ul>
+              <li class="launchSite">Launch Site: </li>
+              <li class="launchPadName">Launch Pad: </li>
+              <li class="rocketName">RocketName: </li>
+              <li class="launchWeather">Current Conditions: </li>
+              <li class="launchProvider">Agency: </li>
+              <li class="launchDate">Date: </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="callout secondary medium-8 columns searchResults hide" style="height:50%; width:100%;">
+        <div class="work-feature-block row">
+          <div class="columns medium-7">
+            <img class="work-feature-block-image shipImg" src="https://placehold.it/600x400" />
+          </div>
+          <div class="columns medium-5">
+            <h2 class="work-feature-block-header missionName">Project Description</h2>
+            <h2>Project Details</h2>
+            <ul>
+              <li class="launchSite">Launch Site: </li>
+              <li class="launchPadName">Launch Pad: </li>
+              <li class="rocketName">RocketName: </li>
+              <li class="launchWeather">Current Conditions: </li>
+              <li class="launchProvider">Agency: </li>
+              <li class="launchDate">Date: </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="callout secondary medium-8 columns searchResults hide" style="height:50%; width:100%;">
+        <div class="work-feature-block row">
+          <div class="columns medium-7">
+            <img class="work-feature-block-image shipImg" src="https://placehold.it/600x400" />
+          </div>
+          <div class="columns medium-5">
+            <h2 class="work-feature-block-header missionName">Project Description</h2>
+            <h2>Project Details</h2>
+            <ul>
+              <li class="launchSite">Launch Site: </li>
+              <li class="launchPadName">Launch Pad: </li>
+              <li class="rocketName">RocketName: </li>
+              <li class="launchWeather">Current Conditions: </li>
+              <li class="launchProvider">Agency: </li>
+              <li class="launchDate">Date: </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="callout secondary medium-8 columns searchResults hide" style="height:50%; width:100%;">
+        <div class="work-feature-block row">
+          <div class="columns medium-7">
+            <img class="work-feature-block-image shipImg" src="https://placehold.it/600x400" />
+          </div>
+          <div class="columns medium-5">
+            <h2 class="work-feature-block-header missionName">Project Description</h2>
+            <h2>Project Details</h2>
+            <ul>
+              <li class="launchSite">Launch Site: </li>
+              <li class="launchPadName">Launch Pad: </li>
+              <li class="rocketName">RocketName: </li>
+              <li class="launchWeather">Current Conditions: </li>
+              <li class="launchProvider">Agency: </li>
+              <li class="launchDate">Date: </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="callout secondary medium-8 columns searchResults hide" style="height:50%; width:100%;">
+        <div class="work-feature-block row">
+          <div class="columns medium-7">
+            <img class="work-feature-block-image shipImg" src="https://placehold.it/600x400" />
+          </div>
+          <div class="columns medium-5">
+            <h2 class="work-feature-block-header missionName">Project Description</h2>
+            <h2>Project Details</h2>
+            <ul>
+              <li class="launchSite">Launch Site: </li>
+              <li class="launchPadName">Launch Pad: </li>
+              <li class="rocketName">RocketName: </li>
+              <li class="launchWeather">Current Conditions: </li>
+              <li class="launchProvider">Agency: </li>
+              <li class="launchDate">Date: </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <br>
 
@@ -172,14 +250,15 @@
 
     </div>
 
+    
     <div class="columns large-6">
       <div class="callout secondary">
         <h5>Astronomy Picture of the Day</h5>
-        <p>Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
-        <img id="apod" alt="Nasa Astronmy Picture of the day" >
+        <p>Each day a different image or photograph of our fascinating universe is featured, along with a brief
+          explanation written by a professional astronomer.</p>
+        <img id="apod" alt="Nasa Astronmy Picture of the day">
         <div id="content"></div>
       </div>
-
     </div>
   </div>
 
@@ -190,4 +269,5 @@
   <script src="script.js"></script>
 </body>
 
+</footer>
 </html>

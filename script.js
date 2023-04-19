@@ -1,17 +1,20 @@
 //!This is the API to fetch from the Launch Library!//
 
 let searchButton=document.querySelector('#searchButton')
-let missionCard=document.querySelector('#missionName');
-let imgCard=document.querySelector('#shipImg')
-let locationCard =document.querySelector('#launchSite');
-let launchPadCard=document.querySelector('#launchPadName');
-let rocketCard=document.querySelector('#rocketName');
-let weatherCard=document.querySelector('#launchWeather');
+let missionCard=document.querySelectorAll('.missionName');
+let imgCard=document.querySelectorAll('.shipImg')
+let locationCard =document.querySelectorAll('.launchSite');
+let launchPadCard=document.querySelectorAll('.launchPadName');
+let rocketCard=document.querySelectorAll('.rocketName');
+let weatherCard=document.querySelectorAll('.launchWeather');
+let searchResults=document.querySelectorAll('.searchResults')
+let launchProvider=document.querySelectorAll('.launchProvider');
+let lDate=document.querySelectorAll('.launchDate')
 
 
 function getLaunchInfo() {
-    let queryLaunchUrl = `https://lldev.thespacedevs.com/2.2.0/launch/?limit=3&offset=3`;
-
+    let queryLaunchUrl = `https://lldev.thespacedevs.com/2.2.0/launch/?limit=5&offset=3`;
+    
     fetch(queryLaunchUrl, {
         method: 'GET',
         headers: {
@@ -48,7 +51,8 @@ function processLaunchData(response) {
 
         //We can access the data from the response using this format.
         //We can then have it append to the page where we need it to display
-
+        searchResults[i].classList.remove('hide')
+        let launchDate=launch.window_start.slice(0,10);
         let launchLocation = launch.pad.location.name;
         let launchPadName = launch.pad.name
         let latitude = launch.pad.latitude;
@@ -57,19 +61,12 @@ function processLaunchData(response) {
         let rocketName= launch.rocket.configuration.name;
         let imgUrl = launch.image;
         let launchServiceProvider = launch.launch_service_provider.name;
-        // getWeather(latitude, longitude);
-
-        // console.log('The Location Is ' + launch.pad.location.name)
-        // console.log('The Launch Pad Name Is ' + launch.pad.name)
-        // console.log('The Latitude Is ' + latitude);
-        // console.log('The Longitude Is ' + longitude);
-        
-        updatePage(imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider)
-        setWeather(latitude,longitude)
+        updatePage(i,imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider,launchDate)
+        setWeather(i,latitude,longitude)
     }
 };
 
-function setWeather(latitude, longitude) {
+function setWeather(i,latitude, longitude) {
     let url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + latitude + "&lon=" + longitude + "&appid=30938dd6fcd531961e9f7d4e28342bde"
     fetch(url)
         .then(function (response) {
@@ -78,17 +75,19 @@ function setWeather(latitude, longitude) {
             else
                 response.json().then(function (data) {
                     console.log(data)
-                    weatherCard.textContent="Current Conditions"+data.list[0].weather[0].description
+                    weatherCard[i].textContent="Current Conditions: "+data.list[0].weather[0].description
 
                 })
         })
 };
-function updatePage(imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider){
-    missionCard.textContent=missionName
-    imgCard.src=imgUrl
-    locationCard.textContent= "Launch Site: "+launchLocation
-    launchPadCard.textContent="Launch Pad: "+launchPadName
-    rocketCard.textContent="RocketName: "+rocketName
+function updatePage(i,imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider,launchDate){
+    missionCard[i].textContent=missionName
+    imgCard[i].src=imgUrl
+    locationCard[i].textContent= "Launch Site: "+launchLocation
+    launchPadCard[i].textContent="Launch Pad: "+launchPadName
+    rocketCard[i].textContent="RocketName: "+rocketName
+    launchProvider[i].textContent="Agency: "+launchServiceProvider
+    lDate[i].textContent="Date: "+launchDate
     
 }
 //! Launch Library API END !//
