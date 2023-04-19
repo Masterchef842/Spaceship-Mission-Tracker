@@ -8,6 +8,8 @@ let launchPadCard=document.querySelectorAll('.launchPadName');
 let rocketCard=document.querySelectorAll('.rocketName');
 let weatherCard=document.querySelectorAll('.launchWeather');
 let searchResults=document.querySelectorAll('.searchResults')
+let launchProvider=document.querySelectorAll('.launchProvider');
+let lDate=document.querySelectorAll('.launchDate')
 
 
 function getLaunchInfo() {
@@ -50,6 +52,7 @@ function processLaunchData(response) {
         //We can access the data from the response using this format.
         //We can then have it append to the page where we need it to display
         searchResults[i].classList.remove('hide')
+        let launchDate=launch.window_start.slice(0,10);
         let launchLocation = launch.pad.location.name;
         let launchPadName = launch.pad.name
         let latitude = launch.pad.latitude;
@@ -58,7 +61,7 @@ function processLaunchData(response) {
         let rocketName= launch.rocket.configuration.name;
         let imgUrl = launch.image;
         let launchServiceProvider = launch.launch_service_provider.name;
-        updatePage(i,imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider)
+        updatePage(i,imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider,launchDate)
         setWeather(i,latitude,longitude)
     }
 };
@@ -77,12 +80,14 @@ function setWeather(i,latitude, longitude) {
                 })
         })
 };
-function updatePage(i,imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider){
+function updatePage(i,imgUrl,missionName,launchLocation,launchPadName,rocketName,launchServiceProvider,launchDate){
     missionCard[i].textContent=missionName
     imgCard[i].src=imgUrl
     locationCard[i].textContent= "Launch Site: "+launchLocation
     launchPadCard[i].textContent="Launch Pad: "+launchPadName
     rocketCard[i].textContent="RocketName: "+rocketName
+    launchProvider[i].textContent="Agency: "+launchServiceProvider
+    lDate[i].textContent="Date: "+launchDate
     
 }
 //! Launch Library API END !//
