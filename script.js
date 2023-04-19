@@ -1,4 +1,5 @@
 //!This is the API to fetch from the Launch Library!//
+
 let searchButton=document.querySelector('#searchButton')
 let missionCard=document.querySelector('#missionName');
 let imgCard=document.querySelector('#shipImg')
@@ -6,6 +7,7 @@ let locationCard =document.querySelector('#launchSite');
 let launchPadCard=document.querySelector('#launchPadName');
 let rocketCard=document.querySelector('#rocketName');
 let weatherCard=document.querySelector('#launchWeather');
+
 
 function getLaunchInfo() {
     let queryLaunchUrl = `https://lldev.thespacedevs.com/2.2.0/launch/?limit=3&offset=3`;
@@ -91,8 +93,29 @@ function updatePage(imgUrl,missionName,launchLocation,launchPadName,rocketName,l
 }
 //! Launch Library API END !//
 
+// function made to send api request
+async function sendAPIRequest() {
+    let nasa_key = 'rn9bVJgUa0FaOs6GRHb3NN3WbN8N4HZACMMdrI8Y'
+    let response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${nasa_key}`);
+    console.log(response);
+    // responding code in json
+    let data = await response.json();
+    console.log(data);
+    document.getElementById("apod").src = data.hdurl;
+  var imageTitle = document.getElementById("title");
+
+ useApiData (data)
+}
+    
+function useApiData(data) {
+    document.querySelector('#content').innerHTML = data.explanation
+
+    // document.querySelector('#content').innerHTML = `<img src="${data.url}">`
+
+}
 
 
 //main code
-
+sendAPIRequest();
 searchButton.addEventListener("click", getLaunchInfo)
+

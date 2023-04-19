@@ -21,7 +21,7 @@
     <h1 class="subnav-hero-headline">Space Stuff <small>Foundation CSS Example</small></h1>
     <ul class="subnav-hero-subnav">
       <li><a href="#">Launch API</a></li>
-      <li><a href="#">Second API</a></li>
+      <li><a href="#apod">Astronomy Picture of the Day</a></li>
       <li><a href="#">About Us</a></li>
     </ul>
   </header>
@@ -42,7 +42,7 @@
               <div class=" translucent-form-overlay">
                 <form>
                   <h3>Search for Launches</h3>
-                  <div class="row columns">
+                  <div class="row columns" id="launches-and-events">
                     <label>Launch Location:
                       <select name="location" type="text">
                         <option>All</option>
@@ -101,6 +101,8 @@
                     </label>
                   </div>
 
+             
+
                   <button id="searchButton" type="button" class="primary button expanded search-button">
                     Search
                   </button>
@@ -156,17 +158,21 @@
         <button class="button" id="getWeather">Push</button>
       </div>
 
+
+
     </div>
 
     <div class="column">
       <div class="callout secondary">
-        <h5>This is a secondary callout</h5>
-        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-        <a href="#">It's dangerous to go alone, take this.</a>
+        <h5>Astronomy Picture of the Day</h5>
+        <p>Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
+        <img id="apod" alt="Nasa Astronmy Picture of the day" >
+        <div id="content"></div>
       </div>
 
     </div>
   </div>
+
 
   <!-- Compressed JavaScript from Foundation-->
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"
