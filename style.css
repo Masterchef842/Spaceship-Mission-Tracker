@@ -190,3 +190,6 @@ collapsible label {
 .header-container .large-header {
   background-image: url(images/TheMoonHeaderBG.jpg);
 }
+.hide{
+  display:none;
+}
