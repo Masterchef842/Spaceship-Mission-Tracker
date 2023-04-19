@@ -9,14 +9,7 @@ Provide a short description explaining the what, why, and how of your project. U
 - What problem does it solve?
 - What did you learn?
 
-## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
 
 ## Installation
 
@@ -32,39 +25,26 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+List of collaborators with links to our GitHub profiles.
 
-Will Lord ~ GitHub Link ~ 
-Kevin Callaghan ~ GitHub Link ~ 
-Amari Johnson ~ GitHub Link ~ 
-Tevin Walker  ~ GitHub Link ~ 
-
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Will Lord https://github.com/Masterchef842
+Kevin Callaghan https://github.com/kevincallaghan 
+Amari Johnson https://github.com/asjohnson8735
+Tevin Walker https://github.com/teewalk32
 
 
-https://www.youtube.com/watch?v=hk1ohonv4mk 
+
+
+Tutorials followed for this project with included links to websites.
+
+How to use and write functions with NASA keys: https://www.youtube.com/watch?v=hk1ohonv4mk 
+
+Article on favicon JavaScript: https://spemer.com/articles/set-favicon-with-javascript.html
 
 ## License
 
 MIT License 
----
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't necessary, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-If you created an application or package and would like other developers to contribute to it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
 
 
 ## Tests
