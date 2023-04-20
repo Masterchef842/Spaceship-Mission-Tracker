@@ -75,8 +75,9 @@ background-color: #111  ;
 
 /* Form CSS from Foundation Building Blocks- Start */
 .translucent-form-overlay {
-  max-width: 500px;
-  width: 100%;
+  max-width: 600px;
+  width: 99%;
+  float: right;
   background-color: rgba(54, 54, 54, 0.8);
   padding: 20px;
   color: #fefefe;
@@ -107,6 +108,7 @@ background-color: #111  ;
 .translucent-form-overlay input::placeholder {
   color: #8a8a8a;
 }
+
 /* Form End */
 
 /*  This is where I am putting CSS Related to Expanding the Form  */
@@ -209,4 +211,20 @@ collapsible label {
   text-align: center;
   color:white;
   font-weight: strong;
+}
+
+/* Nav animations */
+
+.hiddenNav {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.showNav {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition-delay: 750ms;
 }
