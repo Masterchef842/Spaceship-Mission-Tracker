@@ -13,32 +13,50 @@ let lDate=document.querySelectorAll('.launchDate')
 
 
 function getLaunchInfo() {
-    let queryLaunchUrl = `https://lldev.thespacedevs.com/2.2.0/launch/?limit=5&offset=3`;
-    
-    fetch(queryLaunchUrl, {
-        method: 'GET',
-        headers: {
-        },
 
-    }).then(response => {
-        if (!response.ok) {
-            throw response;
-        }
-        console.log('SUCCESS');
-        return response.json();
+  let launchLocation = document.getElementsByName("pad__location")[0].value;
+  let isCrewed = document.getElementsByName("is_crewed")[0].value;
+  let lspId = document.getElementsByName("lsp__id")[0].value;
 
-    }).then(response => {
-        processLaunchData(response);
+  let queryLaunchUrl = `https://lldev.thespacedevs.com/2.2.0/launch/?limit=5&offset=3`;
 
-    }).catch((errorResponse) => {
-        if (errorResponse.text) {
-            errorResponse.text().then(errorMessage => {
-                console.error('Error:', errorMessage);
-            })
-        } else {
-            console.error('Error:', errorResponse);
-        }
-    });
+  if (launchLocation) {
+    queryLaunchUrl += `&pad__location=${launchLocation}`;
+  }
+
+  if (isCrewed) {
+    queryLaunchUrl += `&isCrewed=${isCrewed}`;
+  }
+
+  if (lspId) {
+    queryLaunchUrl += `&lsp__id=${lspId}`;
+  }
+
+  fetch(queryLaunchUrl, {
+    method: 'GET',
+    headers: {
+    },
+
+  }).then(response => {
+    if (!response.ok) {
+      throw response;
+    }
+    console.log('SUCCESS');
+    console.log(queryLaunchUrl)
+    return response.json();
+
+  }).then(response => {
+    processLaunchData(response);
+
+  }).catch((errorResponse) => {
+    if (errorResponse.text) {
+      errorResponse.text().then(errorMessage => {
+        console.error('Error:', errorMessage);
+      })
+    } else {
+      console.error('Error:', errorResponse);
+    }
+  });
 }
 
 

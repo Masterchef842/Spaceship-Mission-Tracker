@@ -41,7 +41,7 @@
   <br>
 
   <!-- First Row on page (form and results) -->
- 
+
   <div class="row align-center">
     <div class="medium-4 columns">
       <!-- This is where the collapsible CSS starts taking effect -->
@@ -56,65 +56,61 @@
                 <h3>Search for Launches</h3>
                 <div class="row columns" id="launches-and-events">
                   <label>Launch Location:
-                    <select name="location" type="text">
-                      <option>All</option>
-                      <option value="Baikonur">Baikonur</option>
-                      <option value="Boca Chica / Starbase">Boca Chica / Starbase</option>
-                      <option value="Cape Canaveral">Cape Canaveral</option>
-                      <option value="French Guiana">French Guiana</option>
-                      <option value="Kennedy Space Center">Kennedy Space Center</option>
-                      <option value="Plesetsk">Plesetsk</option>
-                      <option value="Vanderberg">Vanderberg</option>
-                      <option value="Vostochny">Vostochny</option>
-                      <option value="Wallops Island">Wallops Island</option>
-                    </select>
-                  </label>
-                </div>
-                <div class="row columns">
-                  <label>Future/Past:
-                    <select name="futurePast" type="text">
-                      <option>All</option>
-                      <option value="Future">Future</option>
-                      <option value="Past">Past</option>
+
+                    <select name="pad__location" type="text">
+                      <option value="">All</option>
+                      <option value="15">Baikonur</option>
+                      <option value="143">Boca Chica / Starbase</option>
+                      <option value="12">Cape Canaveral</option>
+                      <option value="13">French Guiana</option>
+                      <option value="17">Jiuquan (China)</option>
+                      <option value="27">Kennedy Space Center</option>
+                      <option value="9">Naro (South Korea)</option>
+                      <option value="10">Onenui Station</option>
+                      <option value="6">Plesetsk</option>
+                      <option value="14">Satish Dhawan (India)</option>
+                      <option value="11">Vanderberg</option>
+                      <option value="18">Vostochny</option>
+                      <option value="18">Wallops Island</option>
                     </select>
                   </label>
                 </div>
                 <div class="row columns">
                   <label>Crewed:
-                    <select name="crewed" type="text">
-                      <option>All</option>
-                      <option value="Crewed">Crewed</option>
-                      <option value="Un-Crewed">Un-Crewed</option>
+
+                    <select name="is_crewed" type="text">
+                      <option value="">All</option>
+                      <option value="true">Crewed</option>
+                      <option value="false">Un-Crewed</option>
                     </select>
                   </label>
                 </div>
                 <div class="row columns">
                   <label>Launch Service Provider
-                    <select name="launchServiceProvider" type="text">
-                      <option>Any</option>
-                      <option value="Arianespace">Arianespace</option>
-                      <option value="Astra Space">Astra Space</option>
-                      <option value="Blue Origin">Blue Origin</option>
-                      <option value="China Aerospace Science and Technology Corporation">China Aerospace Science and
+
+                    <select name="lsp__id" type="text">
+                      <option value="">Any</option>
+                      <option value="115">Arianespace</option>
+                      <option value="285">Astra Space</option>
+                      <option value="141">Blue Origin</option>
+                      <option value="88">China Aerospace Science and
                         Technology Corporation</option>
-                      <option value="China National Space Administration">China National Space Administration</option>
-                      <option value="Firefly Aerospace">Firefly Aerospace</option>
-                      <option value="Indian Space Research Organization">Indian Space Research Organization</option>
-                      <option value="Japan Aerospace Exploration Agency">Japan Aerospace Exploration Agency</option>
-                      <option value="Khrunichev State Research and Production Space Center">Khrunichev State Research
+                      <option value="17">China National Space Administration</option>
+                      <option value="265">Firefly Aerospace</option>
+                      <option value="31">Indian Space Research Organization</option>
+                      <option value="37">Japan Aerospace Exploration Agency</option>
+                      <option value="96">Khrunichev State Research
                         and Production Space Center</option>
-                      <option value="National Aeronautics and Space Administration">National Aeronautics and Space
+                      <option value="44">National Aeronautics and Space
                         Administration</option>
-                      <option value="Rocket Lab Ltd">Rocket Lab Ltd</option>
-                      <option value="Russian Federal Space Agency">Russian Federal Space Agency (ROSCOSMOS)</option>
-                      <option value="SpaceX">SpaceX</option>
-                      <option value="United Launch Alliance">United Launch Alliance</option>
+                      <option value="147">Rocket Lab Ltd</option>
+                      <option value="63">Russian Federal Space Agency (ROSCOSMOS)</option>
+                      <option value="121">SpaceX</option>
+                      <option value="124">United Launch Alliance</option>
                     </select>
                   </label>
                 </div>
-
-
-
+    
                 <button id="searchButton" type="button" class="primary button expanded search-button">
                   Search
                 </button>
