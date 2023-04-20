@@ -6,6 +6,11 @@
 We were highly motivated to start this project because we wanted more knowledge about space with it being all on one webpage to make it easily accessible. This webpage helps users track up coming space launches, weather of that specific location, and daily tracking of moon phases and NASA's Astronomy Picture of the Day with an explanation included underneath the picture. We learned new thing about rockets and launches with a chance of learning or being presented with something we never seen or heard of with a new Astronomy picture daily aswell being able to track the moon phase daily.
 
 
+## Acceptance-criteria
+
+
+![ac-photo.png](./images/ac-photo.png)
+
 
 ## Wire-Frame
 

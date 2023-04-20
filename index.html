@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foundation Test Document</title>
+  <title>Spaceship Mission Tracker</title>
 
   <!-- Compressed CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
@@ -21,19 +21,12 @@
   <!-- This is the header with the nav buttons -->
   <div class="header-container">
     <header class="subnav-hero-section large-header">
-      <h1 class="subnav-hero-headline" style="font-family: 'Jura', sans-serif; -webkit-text-stroke: 1px black;
-     color: white;
-     text-shadow:
-         3px 3px 0 #000,
-       -1px -1px 0 #000,  
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-         1px 1px 0 #000;">Space Stuff <small>Foundation CSS Example</small></h1>
+      <img id="headerImage" style="width:600px;" src="images/SpaceshipMissionTracker.png">
       <ul class="subnav-hero-subnav" style="font-family: 'Jura', sans-serif; font-size:40px;">
-        <li><a href="#searchResults">Launch API</a></li>
-        <li><a href="#apod">Astronomy picture of the day</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a target="_blank" href="https://zurb.com/responsive">Just do it!</a></li>
+        <li><a href="#launchSearchSection" class="hiddenNav">Launch API</a></li>
+        <li><a href="#apod" class="hiddenNav">Astronomy picture of the day</a></li>
+        <li><a href="moonPhase" class="hiddenNav">Moon Phase</a></li>
+        <li><a href="#footer" class="hiddenNav">About Us</a></li>
       </ul>
     </header>
   </div>
@@ -46,9 +39,9 @@
     <div class="medium-12 columns">
       <!-- This is where the collapsible CSS starts taking effect -->
       <div class="wrapper"style="width:100%;">
-        <div class="collapsible" >
+        <div class="collapsible" id="launchSearchSection">
           <input type="checkbox" id="collapsible-head">
-          <label for="collapsible-head" class="button round large expand">Search for Upcoming Launch Information</label>
+          <label for="collapsible-head" style="width:100%; margin-bottom:10px;" class="button dropdown large expand">Search for Upcoming Launch Information</label>
           <div class="collapsible-text" style="width:100%;">
             <!-- This is the Form -->
             <div class=" translucent-form-overlay">
@@ -247,7 +240,7 @@
     </div>
 
     
-    <div class="columns large-6">
+    <div class="columns large-6" id="apodSectionContainer">
       <div class="white-text" class="callout secondary">
         <h5>Astronomy Picture of the Day</h5>
         <p>Each day a different image or photograph of our fascinating universe is featured, along with a brief
