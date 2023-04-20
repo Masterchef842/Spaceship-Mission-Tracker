@@ -209,3 +209,9 @@ collapsible label {
   display:none;
 
 }
+#footer{
+
+  text-align: center;
+  color:white;
+  font-weight: strong;
+}
