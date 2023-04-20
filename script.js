@@ -10,9 +10,14 @@ let weatherCard=document.querySelectorAll('.launchWeather');
 let searchResults=document.querySelectorAll('.searchResults')
 let launchProvider=document.querySelectorAll('.launchProvider');
 let lDate=document.querySelectorAll('.launchDate')
+let timer=[]
 
 function getLaunchInfo() {
-
+  for(let i=0; i<timer.length; i++){
+    clearInterval(timer[i]);
+  }
+  timer=[]
+  
   let launchLocation = document.getElementsByName("pad__location")[0].value;
   let isCrewed = document.getElementsByName("is_crewed")[0].value;
   let lspId = document.getElementsByName("lsp__id")[0].value;
@@ -75,7 +80,7 @@ function processLaunchData(response) {
         let launchPadName = launch.pad.name
         let latitude = launch.pad.latitude;
         let longitude = launch.pad.longitude;
-        let missionName = launch.mission.name;
+        let missionName = launch.name;
         let rocketName= launch.rocket.configuration.name;
         let imgUrl = launch.image;
         let launchServiceProvider = launch.launch_service_provider.name;
@@ -106,7 +111,7 @@ function updatePage(i,imgUrl,missionName,launchLocation,launchPadName,rocketName
     rocketCard[i].textContent="RocketName: "+rocketName
     launchProvider[i].textContent="Agency: "+launchServiceProvider
 
-    setInterval(function(){
+    let timerObj= setInterval(function(){
       let diff=dayjs(launchDate).diff(dayjs(), 's')
 
       let days = Math.floor(diff / 86400);
@@ -117,6 +122,7 @@ function updatePage(i,imgUrl,missionName,launchLocation,launchPadName,rocketName
       lDate[i].textContent="Liftoff: "+days+ " days, "+hours+" hours, "+minutes+" minutes, "+seconds+" seconds";
       lDate[i].style="font-weight: bold;"
     },1000)
+    timer.push(timerObj)
     
     
 }
