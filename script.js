@@ -11,14 +11,13 @@ let searchResults=document.querySelectorAll('.searchResults')
 let launchProvider=document.querySelectorAll('.launchProvider');
 let lDate=document.querySelectorAll('.launchDate')
 
-
 function getLaunchInfo() {
 
   let launchLocation = document.getElementsByName("pad__location")[0].value;
   let isCrewed = document.getElementsByName("is_crewed")[0].value;
   let lspId = document.getElementsByName("lsp__id")[0].value;
 
-  let queryLaunchUrl = `https://lldev.thespacedevs.com/2.2.0/launch/?limit=5&offset=3`;
+  let queryLaunchUrl = `https://lldev.thespacedevs.com/2.2.0/launch/upcoming/?limit=5&offset=3`;
 
   if (launchLocation) {
     queryLaunchUrl += `&pad__location=${launchLocation}`;
@@ -70,7 +69,8 @@ function processLaunchData(response) {
         //We can access the data from the response using this format.
         //We can then have it append to the page where we need it to display
         searchResults[i].classList.remove('hide')
-        let launchDate=launch.window_start.slice(0,10);
+        let launchDate=launch.window_start
+        console.log(launchDate)
         let launchLocation = launch.pad.location.name;
         let launchPadName = launch.pad.name
         let latitude = launch.pad.latitude;
@@ -105,7 +105,19 @@ function updatePage(i,imgUrl,missionName,launchLocation,launchPadName,rocketName
     launchPadCard[i].textContent="Launch Pad: "+launchPadName
     rocketCard[i].textContent="RocketName: "+rocketName
     launchProvider[i].textContent="Agency: "+launchServiceProvider
-    lDate[i].textContent="Date: "+launchDate
+
+    setInterval(function(){
+      let diff=dayjs(launchDate).diff(dayjs(), 's')
+
+      let days = Math.floor(diff / 86400);
+      let hours = Math.floor((diff % 86400) / 3600);
+      let minutes = Math.floor(((diff%86400)% 3600) / 60);
+      let seconds = diff % 60;
+
+      lDate[i].textContent="Liftoff: "+days+ " days, "+hours+" hours, "+minutes+" minutes, "+seconds+" seconds";
+      lDate[i].style="font-weight: bold;"
+    },1000)
+    
     
 }
 //! Launch Library API END !//
