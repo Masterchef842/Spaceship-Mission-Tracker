@@ -100,7 +100,7 @@ async function sendAPIRequest() {
     // responding code in json
     let data = await response.json();
     console.log(data);
-    document.getElementById("apod").src = data.hdurl;
+    document.getElementById("apod").src = data.url;
   var imageTitle = document.getElementById("title");
 
  useApiData (data)
