@@ -113,10 +113,15 @@ background-color: #111  ;
 .wrapper {
   display: flex;
   justify-content: center;
+  width: 600px;
+}
+
+.collapsible:hover {
+  letter-spacing: .14em;
 }
 
 .collapsible {
-  max-width: 450px;
+  max-width: 600px;
   overflow: hidden;
   font-weight: 500;
 }
@@ -128,30 +133,25 @@ background-color: #111  ;
 collapsible label {
   position: relative;
   font-size: 50px;
-  height:40px;
-  background: #666;
+  height: 40px;
   box-shadow: 0 5px 11px 0 reba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
   color: #1c1c6b;
   display: block;
+  overflow: hidden;
   margin-bottom: 10px;
   cursor: pointer;
   padding: 15px 0;
-  border-radius: 4px;
   z-index: 1;
+  width: 100%;
 }
 
 .collapsible label:after {
   content: "";
   position: absolute;
-  right: 15px;
   top: 20px;
   width: 18px;
   height: 18px;
   transition: all 0.5s ease;
-}
-
-.collapsible input:checked+label:after {
-  transform: rotate(90deg);
 }
 
 .collapsible-text {
