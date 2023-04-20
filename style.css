@@ -53,6 +53,16 @@
 .subnav-hero-subnav li a:hover {
   background: rgba(254, 254, 254, 0.15);
 }
+
+body {
+
+background-color: #111  ;
+}
+
+.callout.secondary {
+  background-color: #666;
+}
+
 /* Large Blue Nav End */
 
 /* Row Formatting - keeps the rows from taking up 100% width on really wide screens */
@@ -192,4 +202,6 @@ collapsible label {
 }
 .hide{
   display:none;
+
 }
+

@@ -13,6 +13,7 @@ let lDate=document.querySelectorAll('.launchDate')
 
 
 function getLaunchInfo() {
+
   let launchLocation = document.getElementsByName("pad__location")[0].value;
   let isCrewed = document.getElementsByName("is_crewed")[0].value;
   let lspId = document.getElementsByName("lsp__id")[0].value;
@@ -117,7 +118,7 @@ async function sendAPIRequest() {
     // responding code in json
     let data = await response.json();
     console.log(data);
-    document.getElementById("apod").src = data.hdurl;
+    document.getElementById("apod").src = data.url;
   var imageTitle = document.getElementById("title");
 
  useApiData (data)

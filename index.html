@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+  
   <!-- This is the header with the nav buttons -->
   <div class="header-container">
     <header class="subnav-hero-section large-header">
@@ -54,6 +56,7 @@
                 <h3>Search for Launches</h3>
                 <div class="row columns" id="launches-and-events">
                   <label>Launch Location:
+
                     <select name="pad__location" type="text">
                       <option value="">All</option>
                       <option value="15">Baikonur</option>
@@ -74,6 +77,7 @@
                 </div>
                 <div class="row columns">
                   <label>Crewed:
+
                     <select name="is_crewed" type="text">
                       <option value="">All</option>
                       <option value="true">Crewed</option>
@@ -83,6 +87,7 @@
                 </div>
                 <div class="row columns">
                   <label>Launch Service Provider
+
                     <select name="lsp__id" type="text">
                       <option value="">Any</option>
                       <option value="115">Arianespace</option>
@@ -105,9 +110,7 @@
                     </select>
                   </label>
                 </div>
-              
-              
-              
+    
                 <button id="searchButton" type="button" class="primary button expanded search-button">
                   Search
                 </button>
@@ -228,8 +231,8 @@
   <br>
 
   <!-- Second Row -->
-  <div class="row small-up-2">
-    <div class="column">
+  
+    <div class="columns large-6">
       <div class="callout secondary">
         <h5>Weather On Mars</h5>
         <div id=marsWeather>
@@ -243,7 +246,8 @@
 
     </div>
 
-    <div class="column">
+    
+    <div class="columns large-6">
       <div class="callout secondary">
         <h5>Astronomy Picture of the Day</h5>
         <p>Each day a different image or photograph of our fascinating universe is featured, along with a brief
@@ -251,7 +255,6 @@
         <img id="apod" alt="Nasa Astronmy Picture of the day">
         <div id="content"></div>
       </div>
-
     </div>
   </div>
 
@@ -262,4 +265,5 @@
   <script src="script.js"></script>
 </body>
 
+</footer>
 </html>
