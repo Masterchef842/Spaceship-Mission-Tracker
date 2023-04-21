@@ -31,6 +31,8 @@ function getLaunchInfo() {
   if (lspId) {
     queryLaunchUrl += `&lsp__id=${lspId}`;
   }
+  
+  //The fetch below is the section where I borrowed arrow notation code from https://dev.to/myogeshchavan97/do-you-know-why-we-check-for-response-ok-while-using-fetch-1mkd as cited in the README.
 
   fetch(queryLaunchUrl, {
     method: 'GET',
@@ -99,7 +101,7 @@ function processLaunchData(response) {
 };
 
 function setWeather(i, latitude, longitude) {
-  let url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + latitude + "&lon=" + longitude + "&appid=30938dd6fcd531961e9f7d4e28342bde"
+  let url = "https://api.openweathermap.org/data/2.5/forecast?lat=" + latitude + "&lon=" + longitude + "&appid=30938dd6fcd531961e9f7d4e28342bde"
   fetch(url)
     .then(function (response) {
       if (!response.ok)
