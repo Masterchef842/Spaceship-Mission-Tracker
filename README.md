@@ -2,40 +2,49 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+We were highly motivated to start this project because we wanted more knowledge about space with it being all on one webpage to make it easily accessible. This webpage helps users track up coming space launches, weather of that specific location, and daily tracking of moon phases and NASA's Astronomy Picture of the Day with an explanation included underneath the picture. We learned new thing about rockets and launches with a chance of learning or being presented with something we never seen or heard of with a new Astronomy picture daily aswell being able to track the moon phase daily.
 
 
+## Acceptance-criteria
+
+
+![ac-photo.png](./images/ac-photo.png)
+
+
+## Wire-Frame
+
+This wire frame is a sketch of what we wanted our webpage to look like.
+
+![wire-frame.png](./images/wireframe.png)
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+There is no Installation required for this webpage.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+click the blue 'Search for Upcoming Launch Information' button the select if you by all and any or select to you preference.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
+![webpage-photo.png](./images/webpage.png)
 
 ## Credits
 
 List of collaborators with links to our GitHub profiles.
 
 Will Lord https://github.com/Masterchef842
+
 Kevin Callaghan https://github.com/kevincallaghan 
+
 Amari Johnson https://github.com/asjohnson8735
+
 Tevin Walker https://github.com/teewalk32
 
 
 
 
-Tutorials followed for this project with included links to websites.
+    ~Tutorials followed for this project with included links to websites.~
+
 
 How to use and write functions with NASA keys: https://www.youtube.com/watch?v=hk1ohonv4mk 
 
@@ -46,7 +55,8 @@ Article on favicon JavaScript: https://spemer.com/articles/set-favicon-with-java
 MIT License 
 
 
+## Webpage
 
-## Tests
+Heres a link to the deployed webpage!
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+https://masterchef842.github.io/Spaceship-Mission-Tracker/
