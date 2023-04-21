@@ -210,3 +210,9 @@ collapsible label {
   color:white;
   font-weight: strong;
 }
+
+#moon-output {
+
+  font-size: 25px;
+  color: white;
+}
