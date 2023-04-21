@@ -186,6 +186,7 @@ const options = {
 	}
 };
 
+//moon phase rapid API
 const apiURL = "https://moon-calendar.p.rapidapi.com/moon_phase"
 
 fetch(apiURL, options)
@@ -201,6 +202,7 @@ fetch(apiURL, options)
 	})
 	.catch(err => console.error(err));
 
+  //function to print moon phase image
   function displayImage(text) {
     let imageElement = document.createElement("img");
     let imageContainer = document.getElementById("moon-image-container");
