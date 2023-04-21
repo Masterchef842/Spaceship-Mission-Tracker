@@ -46,15 +46,27 @@ Tevin Walker https://github.com/teewalk32
     ~Tutorials followed for this project with included links to websites.~
 
 
-How to use and write functions with NASA keys: https://www.youtube.com/watch?v=hk1ohonv4mk 
+How to use and write functions with NASA keys: TW https://www.youtube.com/watch?v=hk1ohonv4mk 
 
-Article on favicon JavaScript: https://spemer.com/articles/set-favicon-with-javascript.html
+Article on favicon JavaScript: KC https://spemer.com/articles/set-favicon-with-javascript.html
 
-API for NASA https://api.nasa.gov/
+API for NASA TW https://api.nasa.gov/
 
-API for rockets https://ll.thespacedevs.com/2.2.0/launch/
+API for rockets WL KC https://ll.thespacedevs.com/2.2.0/launch/
 
-API for moon phase https://rapidapi.com/sadasdasdlukedev/api/moon-phase
+API for moon phase AJ https://rapidapi.com/sadasdasdlukedev/api/moon-phase
+
+ Foundation Building Blocks for help initial HTML KC https://get.foundation/building-blocks/
+
+ fetch() - Working With Data & APIs in JavaScript KC video https://www.youtube.com/watch?v=tc8DU14qX6I
+
+  Tabular Data - Working With Data & APIs in JavaScript kC https://www.youtube.com/watch?v=RfMkdvN-23o
+
+  This helped solve a problem I had console.log on the response KC https://stackoverflow.com/questions/44597208/javascript-es6-console-log-object-using-template-literal
+
+  I used a method of fetch heavily inspired by the example in this article for my launch API KC https://dev.to/myogeshchavan97/do-you-know-why-we-check-for-response-ok-while-using-fetch-1mkd
+
+  This is the API documentation I used to help with launch API - KC https://github.com/TheSpaceDevs/Tutorials/blob/main/tutorials/getting_started_LL2/README.md
 
 ## License
 
