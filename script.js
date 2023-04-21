@@ -99,7 +99,7 @@ function processLaunchData(response) {
 };
 
 function setWeather(i, latitude, longitude) {
-  let url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + latitude + "&lon=" + longitude + "&appid=30938dd6fcd531961e9f7d4e28342bde"
+  let url = "https://api.openweathermap.org/data/2.5/forecast?lat=" + latitude + "&lon=" + longitude + "&appid=30938dd6fcd531961e9f7d4e28342bde"
   fetch(url)
     .then(function (response) {
       if (!response.ok)
