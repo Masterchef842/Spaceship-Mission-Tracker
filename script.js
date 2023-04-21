@@ -171,6 +171,74 @@ function setFavicons(favImg) {
 }
 setFavicons('images/favicon.ico');
 
+const btnEl = document.getElementById("btn");
+const moonEl = document.getElementById("joke");
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '4bd838d849msh26f291d80185d8ep1a9234jsn53e0399e570b',
+		'X-RapidAPI-Host': 'moon-calendar.p.rapidapi.com'
+	}
+};
+
+const apiURL = "https://moon-calendar.p.rapidapi.com/moon_phase"
+
+fetch(apiURL, options)
+	.then(response => response.json())
+	.then(response => {
+		const data = {
+			moon_phase: response.moon_phase,
+			prediction: "idk"
+		};
+		const moonOutput = document.getElementById("moon-output");
+		moonOutput.innerHTML = data.moon_phase;
+    displayImage(data.moon_phase);
+	})
+	.catch(err => console.error(err));
+
+  function displayImage(text) {
+    let imageElement = document.createElement("img");
+    let imageContainer = document.getElementById("moon-image-container");
+  
+    switch (text) {
+      case "Full Moon":
+        imageElement.src = "images/full-moon.jpg";
+        break;
+      case "Half Moon":
+        imageElement.src = "images/first-quarter.jpg";
+        break;
+      case "First Quarter":
+        imageElement.src = "images/first-quarter.jpg";
+        break;
+      case "Waxing Gibbous":
+        imageElement.src = "images/waxing-gibbous.jpg";
+        break;
+      case "Waxing Crescent":
+        imageElement.src = "images/waxing-crescent.jpg";
+        break;
+      case "Waning Gibbous":
+       imageElement.src = "images/waning-gibbous.jpg"
+        break;
+      case "Waning Crescent":
+          imageElement.src = "images/third-quarter.jpg";
+          break;
+      case "Third Quarter":
+        imageElement.src = "images/third-quarter.jpg";
+        break;
+      case "New Moon":
+        imageElement.src = "images/new-moon.jpg";
+        break;
+      default:
+        imageElement.src = "images/first-quarter.jpg";
+        break;
+    }
+  
+    imageContainer.innerHTML = "";
+    console.log(imageElement.src)
+    imageContainer.appendChild(imageElement);
+  }
+
 // Source: Beyond Fireship Youtube Video "Subtle, yet Beautiful Scroll Animations" link: https://www.youtube.com/watch?v=T33NN_pPeNI
 
 const observer = new IntersectionObserver((entries) => {
@@ -186,3 +254,4 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hiddenNav');
 hiddenElements.forEach((el) => observer.observe(el));
+

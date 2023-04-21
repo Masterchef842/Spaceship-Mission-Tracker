@@ -217,6 +217,12 @@ collapsible label {
   font-weight: strong;
 }
 
+
+#moon-output {
+
+  font-size: 25px;
+  color: white;
+}
 /* Nav animations */
 
 .hiddenNav {
@@ -232,3 +238,4 @@ collapsible label {
   transform: translateX(0);
   transition-delay: 750ms;
 }
+
