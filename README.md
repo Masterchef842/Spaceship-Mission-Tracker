@@ -68,6 +68,8 @@ API for moon phase AJ https://rapidapi.com/sadasdasdlukedev/api/moon-phase
 
   This is the API documentation I used to help with launch API - KC https://github.com/TheSpaceDevs/Tutorials/blob/main/tutorials/getting_started_LL2/README.md
 
+  Thanks to openAI ChatGPT for tutorial Help 
+
 ## License
 
 MIT License 
