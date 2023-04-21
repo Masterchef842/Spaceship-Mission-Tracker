@@ -71,7 +71,7 @@ function processLaunchData(response) {
     var launch = launchData[i];
     console.log(launch.pad.name);
 
-    //Show the new results
+    //Show the new results on the page
     searchResults[i].classList.remove('hide')
 
     let launchDate = launch.window_start
