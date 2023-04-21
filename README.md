@@ -63,7 +63,7 @@ MIT License
 
 ## Webpage
 
-Heres a pictures and link to the deployed webpage!
+Here's a pictures and link to the deployed webpage!
 
 
 ![webpage1.png](./images/webpage1.png)
