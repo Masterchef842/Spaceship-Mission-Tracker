@@ -31,8 +31,6 @@ function getLaunchInfo() {
   if (lspId) {
     queryLaunchUrl += `&lsp__id=${lspId}`;
   }
-  
-  //The fetch below is the section where I borrowed arrow notation code from https://dev.to/myogeshchavan97/do-you-know-why-we-check-for-response-ok-while-using-fetch-1mkd as cited in the README.
 
   fetch(queryLaunchUrl, {
     method: 'GET',
@@ -101,7 +99,7 @@ function processLaunchData(response) {
 };
 
 function setWeather(i, latitude, longitude) {
-  let url = "https://api.openweathermap.org/data/2.5/forecast?lat=" + latitude + "&lon=" + longitude + "&appid=30938dd6fcd531961e9f7d4e28342bde"
+  let url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + latitude + "&lon=" + longitude + "&appid=30938dd6fcd531961e9f7d4e28342bde"
   fetch(url)
     .then(function (response) {
       if (!response.ok)
@@ -122,7 +120,6 @@ function updatePage(i, imgUrl, missionName, launchLocation, launchPadName, rocke
   rocketCard[i].textContent = "RocketName: " + rocketName
   launchProvider[i].textContent = "Agency: " + launchServiceProvider
 
-     //Chat GPT helped write this 
   let timerObj = setInterval(function () {
     let diff = dayjs(launchDate).diff(dayjs(), 's')
 
@@ -180,18 +177,19 @@ setFavicons('images/favicon.ico');
 
 const btnEl = document.getElementById("btn");
 const moonEl = document.getElementById("joke");
-
+//removed API key
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '4bd838d849msh26f291d80185d8ep1a9234jsn53e0399e570b',
+		'X-RapidAPI-Key': '',
 		'X-RapidAPI-Host': 'moon-calendar.p.rapidapi.com'
 	}
 };
 
 //moon phase rapid API
 const apiURL = "https://moon-calendar.p.rapidapi.com/moon_phase"
-
+//fetch code from Rapid API website
+//helped me understand API for this project: https://www.youtube.com/watch?v=QegE9i4UW4I
 fetch(apiURL, options)
 	.then(response => response.json())
 	.then(response => {
@@ -209,7 +207,7 @@ fetch(apiURL, options)
   function displayImage(text) {
     let imageElement = document.createElement("img");
     let imageContainer = document.getElementById("moon-image-container");
-  
+  // CHAT GPT helped write a base for a switch case
     switch (text) {
       case "Full Moon":
         imageElement.src = "images/full-moon.jpg";
