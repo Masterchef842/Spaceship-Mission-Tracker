@@ -17,6 +17,10 @@ function getLaunchInfo() {
   let isCrewed = document.getElementsByName("is_crewed")[0].value;
   let lspId = document.getElementsByName("lsp__id")[0].value;
 
+  for(let i=0; i<timer.length;i++){
+    clearInterval(timer[i])
+  }
+
   let queryLaunchUrl = 'https://ll.thespacedevs.com/2.2.0/launch/upcoming/?is_crewed=' + isCrewed + '&limit=5&offset=3';
 
   if (launchLocation) {
