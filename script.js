@@ -11,12 +11,13 @@ let searchResults = document.querySelectorAll('.searchResults')
 let launchProvider = document.querySelectorAll('.launchProvider');
 let lDate = document.querySelectorAll('.launchDate')
 let timer = []
+let noResults=document.querySelector("#noResults")
 
 function getLaunchInfo() {
   let launchLocation = document.getElementsByName("pad__location")[0].value;
   let isCrewed = document.getElementsByName("is_crewed")[0].value;
   let lspId = document.getElementsByName("lsp__id")[0].value;
-
+  noResults.classList.add('hide');
   for(let i=0; i<timer.length;i++){
     clearInterval(timer[i])
   }
@@ -65,10 +66,13 @@ function getLaunchInfo() {
 function processLaunchData(response) {
   var launchData = response.results;
   console.log(launchData);
-
+  if(launchData.length===0){
+    noResults.classList.remove('hide')
+  }
   // Hide all search results before displaying new ones
   for (var i = 0; i < searchResults.length; i++) {
     searchResults[i].classList.add('hide');
+
   }
 
   for (var i = 0; i < launchData.length; i++) {
