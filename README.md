@@ -50,6 +50,12 @@ How to use and write functions with NASA keys: https://www.youtube.com/watch?v=h
 
 Article on favicon JavaScript: https://spemer.com/articles/set-favicon-with-javascript.html
 
+API for NASA https://api.nasa.gov/
+
+API for rockets https://ll.thespacedevs.com/2.2.0/launch/
+
+API for moon phase https://rapidapi.com/sadasdasdlukedev/api/moon-phase
+
 ## License
 
 MIT License 
