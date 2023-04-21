@@ -31,6 +31,8 @@ function getLaunchInfo() {
   if (lspId) {
     queryLaunchUrl += `&lsp__id=${lspId}`;
   }
+  
+  //The fetch below is the section where I borrowed arrow notation code from https://dev.to/myogeshchavan97/do-you-know-why-we-check-for-response-ok-while-using-fetch-1mkd as cited in the README.
 
   fetch(queryLaunchUrl, {
     method: 'GET',
