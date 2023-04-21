@@ -141,7 +141,7 @@ collapsible label {
   position: relative;
   font-size: 50px;
   height: 40px;
-  box-shadow: 0 5px 11px 0 reba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
   color: #1c1c6b;
   display: block;
   overflow: hidden;
