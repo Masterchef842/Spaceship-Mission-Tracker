@@ -32,6 +32,8 @@ function getLaunchInfo() {
     queryLaunchUrl += `&lsp__id=${lspId}`;
   }
 
+    //The fetch below is the section where I borrowed arrow notation code from https://dev.to/myogeshchavan97/do-you-know-why-we-check-for-response-ok-while-using-fetch-1mkd as cited in the README.  I got additional help from my dad to fit the example to our project needs and create error responses (Kevin).
+
   fetch(queryLaunchUrl, {
     method: 'GET',
     headers: {

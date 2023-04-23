@@ -64,7 +64,7 @@ API for moon phase AJ https://rapidapi.com/sadasdasdlukedev/api/moon-phase
 
   This helped solve a problem I had console.log on the response KC https://stackoverflow.com/questions/44597208/javascript-es6-console-log-object-using-template-literal
 
-  I used a method of fetch heavily inspired by the example in this article for my launch API KC https://dev.to/myogeshchavan97/do-you-know-why-we-check-for-response-ok-while-using-fetch-1mkd
+  I used a method of fetch heavily inspired by the example in this article for my launch API KC https://dev.to/myogeshchavan97/do-you-know-why-we-check-for-response-ok-while-using-fetch-1mkd and I got additional help from my dad to fit the example to our project needs and create error responses (Kevin).
 
   This is the API documentation I used to help with launch API - KC https://github.com/TheSpaceDevs/Tutorials/blob/main/tutorials/getting_started_LL2/README.md
 
