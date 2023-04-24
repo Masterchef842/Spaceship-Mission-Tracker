@@ -32,7 +32,7 @@ function getLaunchInfo() {
     queryLaunchUrl += `&lsp__id=${lspId}`;
   }
 
-    //The fetch below is the section where I borrowed arrow notation code from https://www.visualcrossing.com/resources/documentation/weather-api/how-to-load-weather-data-in-javascript/ as cited in the README.  I got additional help from my dad to fit the example to our project needs (Kevin).
+    //The fetch below is the section where I borrowed arrow notation code from https://www.visualcrossing.com/resources/documentation/weather-api/how-to-load-weather-data-in-javascript/ as cited in the README.  I got additional help from my dad to fit the example to our project needs (Kevin)
 
   fetch(queryLaunchUrl, {
     method: 'GET',
